@@ -1,0 +1,251 @@
+/* Global */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  background-color: #000;
+  font-family: Lato, sans-serif;
+  font-size: 16px;
+}
+
+/* Fonts */
+h2 {
+  font: 400 2.25rem/1.8;
+}
+
+h2,
+h3 {
+  letter-spacing: 5px;
+}
+
+h3 {
+  font: 400 1.75rem/1.8;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1.5%;
+  color: #f7f7f7;
+}
+
+h4 {
+  font: 400 1.5rem/1.8;
+}
+
+p {
+  text-align: center;
+  font: 400 1rem/1.8;
+}
+
+.tocaps {
+  text-transform: uppercase;
+}
+
+.textlg {
+  font-weight: 300;
+}
+
+.textcenter {
+  text-align: center;
+}
+
+.stretch {
+  letter-spacing: 8px;
+}
+
+hr {
+  display: inline-block;
+  border: 0;
+  width: 20%;
+  height: 1px;
+  padding: 0;
+  margin: 1em 0;
+}
+
+/* Hero */
+#herodiv {
+  display: block;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
+#heroimg {
+  max-width: 100%;
+}
+
+#heroimg,
+#herotext,
+#herotext2,
+#planet,
+#ship {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+#herotext,
+#herotext2,
+#planet,
+#ship {
+  max-width: 100vw;
+}
+
+#herotext,
+#herotext2 {
+  left: 1%;
+}
+
+#ship {
+  top: 13%;
+  animation: float 6s ease-in-out infinite;
+}
+
+#intro {
+  padding-top: 100px;
+}
+
+/* Backgrounds */
+.parabg {
+  background-attachment: fixed;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.bgimg-2 {
+  background-image: url(../img/bg.jpg);
+}
+
+#bkdiv {
+  background: #ccc;
+  background: rgba(92, 90, 90, 0.5);
+  margin: auto;
+  padding: 1%;
+  width: 100%;
+}
+
+/* Util */
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#last {
+  background-color: #22262b;
+  min-height: 100vh;
+}
+
+#apiImage {
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#theimg {
+  max-width: 60vw;
+  max-height: 60vh;
+  margin: 0 auto;
+}
+
+.darkcolor {
+  background-color: #282e34;
+  color: #d3d3d3;
+}
+
+/* Footer */
+footer {
+  color: #fff;
+  padding: 30px 0;
+}
+
+footer a {
+  display: block;
+  text-align: center;
+}
+
+footer a img {
+  width: 30px;
+}
+
+/* Stars */
+#stars {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  margin-top: -50vh;
+  margin-left: -50vw;
+  animation: spin 240s linear infinite;
+  background-size: 240px;
+  backface-visibility: visible;
+  opacity: 0.75;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNDAgMjQwIj48cGF0aCBmaWxsPSIjRkZGIiBkPSJNMTA2IDkwaDJ2MmgtMnpNNzQgNjNoMXYxaC0xek0yMyA2NmgxdjFoLTF6TTUwIDExMGgxdjFoLTF6TTYzIDEyOGgxdjFoLTF6TTQ1IDE0OWgxdjFoLTF6TTkyIDE1MWgxdjFoLTF6TTU4IDhoMXYxaC0xek0xNDcgMzNoMnYyaC0yek05MSA0M2gxdjFoLTF6TTE2OSAyOWgxdjFoLTF6TTE4MiAxOWgxdjFoLTF6TTE2MSA1OWgxdjFoLTF6TTEzOCA5NWgxdjFoLTF6TTE5OSA3MWgzdjNoLTN6TTIxMyAxNTNoMnYyaC0yek0xMjggMTYzaDF2MWgtMXpNMjA1IDE3NGgxdjFoLTF6TTE1MiAyMDBoMXYxaC0xek01MiAyMTFoMnYyaC0yek0wIDE5MWgxdjFIMHpNMTEwIDE4NGgxdjFoLTF6Ii8+PC9zdmc+);
+}
+
+/* Media Queries */
+@media only screen and (max-width: 720px) {
+  /* Fonts */
+  .display-3,
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+
+  /* Hero */
+  #herotext,
+  #herotext2,
+  #planet,
+  #ship,
+  .heroimg,
+  .parabg {
+    background-attachment: scroll;
+  }
+
+  /* Intro */
+  #intro {
+    padding-top: 100px;
+  }
+
+  /* Sections */
+  section {
+    text-align: center;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(40px);
+  }
+  to {
+    transform: translatey(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}

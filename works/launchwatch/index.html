@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="noindex, nofollow, none, noimageindex">
+  <title>LaunchWatch - Portfolio</title>
+  <meta name="author" content="Austin">
+  <meta name="description" content="API mashup providing recent and forthcoming Space X launches.">
+  <meta name="keywords" content="space x, api, api mashup, shuttle, space">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="favicon.png" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Lato|Source+Sans+Pro:700" rel="stylesheet">
+  <!-- Stylesheets -->
+  <!-- Reset -->
+  <link rel="stylesheet" href="css/reset.css" type="text/css">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+
+<body>
+
+  <!-- NoScript -->
+  <noscript>
+    <div class="alert alert-danger" role="alert">
+      JavaScript is disabled. Please enable JavaScript and <a href="">reload</a>.
+    </div>
+    <style>
+      .alert {
+        margin-bottom: 0;
+      }
+
+      #herodiv {
+        width: 100vw;
+        height: 55vw;
+      }
+
+      .noscript {
+        color: white;
+        text-align: center;
+        margin: 20px auto;
+        padding: 0 20%;
+      }
+
+      header,
+      main,
+      footer {
+        display: none;
+      }
+    </style>
+
+    <!-- NoScript Hero -->
+    <div>
+      <div class="jumbotron-fluid" id="herodiv">
+        <img src="img/herobg.jpg" id="heroimg" alt="Hero Image">
+        <div id="stars"></div>
+        <img src="img/planet.png" id="planet" alt="Hero Image">
+        <img src="img/ship.png" id="ship" alt="Hero Image">
+        <img src="img/text1.png" id="herotext" alt="Hero Image">
+        <img src="img/text2.png" id="herotext2" alt="Hero Image">
+      </div>
+    </div>
+
+    <!-- NoScript Text -->
+    <div class="noscript">
+      <p>LaunchWatch is a JavaScript fetch and AJAX demonstration. It uses Javascript to fetch
+        data
+        from APIs and using
+        AJAX present them without reloading the page.
+        Please enable JavaScript and reload the page to use the site as intended.</p>
+
+      <a href="" class="btn btn-outline-light">Reload Page</a>
+    </div>
+  </noscript>
+
+  <!-- Hero -->
+  <header>
+    <div class="jumbotron-fluid" id="herodiv">
+      <img src="img/herobg.jpg" id="heroimg" alt="Hero Image">
+      <div id="stars"></div>
+      <img src="img/planet.png" id="planet" alt="Hero Image">
+      <img src="img/ship.png" id="ship" alt="Hero Image">
+      <img src="img/text1.png" id="herotext" alt="Hero Image">
+      <img src="img/text2.png" id="herotext2" alt="Hero Image">
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <!-- Intro -->
+    <section id="intro">
+      <div class="container text-light py-5 textcenter">
+        <div class="row align-items-center">
+          <div class="col-12 align-self-center">
+            <h2 class="textlg tocaps stretch">October 4 1957</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <p>
+              <br>"Listen Now
+              <br>For The Sound
+              <br>That Forevermore
+              <br>Separates The Old
+              <br>From The New."
+              <br>- NBC Radio
+              <br>[The Transmission Of The Satellite]
+              <hr>
+              <p>LaunchWatch is an API mashup using four APIs to provide recent &amp; future Space X launch data.
+                Information displayed includes rocket data, mission description, mission status, &amp; location &amp;
+                countdown to next launch. The site
+                is built with HTML, CSS, JavaScript, &amp; JQuery. The focus of the sites development was practice with
+                AJAX, &amp; parsing JSON from API requests.</p>
+              <br>
+              <br>
+            </p>
+          </div>
+        </div>
+        <button type="button" id="loadAPIs" class="btn btn-outline-light">Get Launch
+          Data</button>
+      </div>
+    </section>
+
+    <!-- LAST LAUNCH -->
+    <section id="last" class="tog bgimg-2 parabg">
+      <div class="container text-light py-5 textcenter">
+        <div id="bkdiv">
+          <h2 class="textlg tocaps stretch">Most Recent
+            Launch</h2>
+          <hr>
+          <h3 id="rocketName"></h3>
+          <div id="apiImage"><img src="" alt="Rocket" class="img-responsive mx-auto d-block" id="theimg"></div>
+          <div id="apiLink"><a href="" id="spacex">Space X Official Page</a></div>
+          <p id="wikiBlurb"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILS OF LAST LAUNCH -->
+    <section id="details" class="tog">
+      <div class="container text-light py-5 textcenter">
+        <h2 class="textlg tocaps stretch">Launch Details</h2>
+        <hr>
+        <p class="tocaps pt-3">Launch Status:</p>
+        <p id="success"></p>
+        <p class="tocaps pt-3">Location:</p>
+        <p id="lastSite"></p>
+        <p class="tocaps pt-3">Mission Details:</p>
+        <p id="rocketDetails"></p>
+        <p class="tocaps pt-3">About The Rocket:</p>
+        <div>
+          <p id="wikiCont"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN TO NEXT LAUNCH -->
+    <section id="next" class="tog bgimg-2 parabg">
+      <div class="container text-light py-5 textcenter">
+        <h2 class="textlg tocaps stretch">Next Launch</h2>
+        <hr>
+        <h3 id="nextTextName"></h3>
+        <p class="tocaps pt-3">Location:</p>
+        <p id="nextTextLocation"></p>
+        <h4 id="countdown"></h4>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Developed by Austin</p>
+    <a href="https://github.com/austinbuilds" target="_blank" aria-label="GitHub" rel="noreferrer">
+      <img src="img/github_sm.png" alt="GitHub" class="footimg">
+    </a>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <!-- Javascript -->
+  <script src="js/script.js"></script>
+  <script src="js/api.js"></script>
+
+</body>
+
+</html>

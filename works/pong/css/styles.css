@@ -1,0 +1,74 @@
+/* Global */
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Main */
+body {
+  background-image: url('../img/background.jpg');
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  width: 100vw;
+  max-height: 100vh;
+}
+
+/* Header */
+#header {
+  margin: auto;
+  text-align: center;
+}
+
+#header img {
+  height: 20vw;
+  max-height: 250px;
+}
+
+/* Canvas */
+#game {
+  margin: 10px auto;
+}
+
+#gameCanvas {
+  display: block;
+  margin: auto;
+  cursor: none;
+  height: 50vw;
+  max-height: 600px;
+}
+
+/* Footer */
+footer {
+  color: white;
+  text-align: center;
+  padding: 30px 0px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+footer a img {
+  width: 1.5rem;
+  margin: 20px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  #gameCanvas {
+    width: 85%;
+    height: auto;
+  }
+
+  footer p {
+    font-size: 0.75rem;
+  }
+
+  footer a img {
+    width: 1.25rem;
+  }
+}
