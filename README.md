@@ -18,7 +18,7 @@ View [here](https://www.austinwebportfolio.com).
 * Git Info
   * SVG, Pug, Node, Express, APIs
 * Internship
-  * Wordpress, PHP, Jenkins, Documentation
+  * Wordpress, PHP, Documentation
 
 
 ## :computer: Technologies Demonstrated
